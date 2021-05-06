@@ -12,8 +12,9 @@ RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrad
     DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
     build-essential \
     nodejs \
-    yarn && \
-    apt-get clean && \
+    yarn
+
+RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     truncate -s 0 /var/log/*log
 
