@@ -13,9 +13,9 @@ RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrad
 
 RUN apt-get install -yq --no-install-recommends build-essential 
 
-RUN apt-get install nodejs
+RUN apt-get install -yq --no-install-recommends nodejs
 
-RUN apt-get install yarn
+RUN apt-get install -yq --no-install-recommends yarn
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
