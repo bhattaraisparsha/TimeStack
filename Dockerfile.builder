@@ -17,7 +17,7 @@ RUN apt-key update
 RUN apt-get update
 RUN apt-get upgrade
 
-RUN apt-get install --force-yes yarn
+RUN apt-get install yarn --force-yes 
 
 RUN apt-get install --force-yes nodejs
 
