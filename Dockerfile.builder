@@ -15,10 +15,11 @@ RUN apt-get install -yq --no-install-recommends build-essential
 
 RUN apt-key update
 RUN apt-get update
+RUN apt-get upgrade
 
-RUN apt-get install --force-yes --no-install-recommends nodejs
+RUN apt-get install --force-yes yarn
 
-RUN apt-get install --force-yes --no-install-recommends yarn
+RUN apt-get install --force-yes nodejs
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
