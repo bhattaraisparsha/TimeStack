@@ -13,6 +13,9 @@ RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrad
 
 RUN apt-get install -yq --no-install-recommends build-essential 
 
+RUN apt-key update
+RUN apt-get update
+
 RUN apt-get install --force-yes --no-install-recommends nodejs
 
 RUN apt-get install --force-yes --no-install-recommends yarn
