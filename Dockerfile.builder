@@ -17,9 +17,10 @@ RUN apt-key update
 RUN apt-get update
 RUN apt-get upgrade
 
+RUN apt-get install nodejs --force-yes 
+
 RUN apt-get install yarn --force-yes 
 
-RUN apt-get install --force-yes nodejs
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
